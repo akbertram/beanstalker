@@ -16,12 +16,11 @@ package br.com.ingenieux.mojo.beanstalk;
  * limitations under the License.
  */
 
-import java.util.Arrays;
-
+import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentRequest;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 
-import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentRequest;
+import java.util.Arrays;
 
 /**
  * Updates the environment description, deploys a new application version,
@@ -32,9 +31,9 @@ import com.amazonaws.services.elasticbeanstalk.model.UpdateEnvironmentRequest;
  * "http://docs.amazonwebservices.com/elasticbeanstalk/latest/api/API_UpdateEnvironment.html"
  * >UpdateEnvironment API</a> call.
  * 
- * @goal update-environment
+ * @goal update-environment-configuration-settings
  */
-public class UpdateEnvironmentMojo extends AbstractBeanstalkMojo {
+public class UpdateEnvironmentConfigurationSettingsMojo extends AbstractBeanstalkMojo {
 	protected Object executeInternal() throws MojoExecutionException,
 	    MojoFailureException {
 		UpdateEnvironmentRequest req = new UpdateEnvironmentRequest()
